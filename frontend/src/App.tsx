@@ -1,26 +1,24 @@
-import React from 'react';
-import ExcelUpload from './components/ExcelUpload';
-import './App.css';
+import React from "react";
+import ExcelUpload from "./components/ExcelUpload";
+import "./App.css";
 
 const App: React.FC = () => {
-    return (
-        <div className="app-container">
-            <header className="app-header">
-                <div className="header-content">
-                    <h1 className="page-title">Add From Excel</h1>
-                </div>
-            </header>
+  return (
+    <div className="appContainer">
+      <header className="appHeader">
+        <h1 className="title">Candidate Database Integration </h1>
+      </header>
 
-            <main className="app-main">
-                <section className="upload-section">
-                    <div className="upload-header">
-                        <h3>Add Candidates to Database</h3>
-                    </div>
-                    <ExcelUpload />
-                </section>
-            </main>
+      <main className="mainSection">
+        <div className="uploadHeader">
+          <center>
+            <h3>Click below to add your Excel File</h3>
+          </center>
         </div>
-    );
+        <ExcelUpload/>
+      </main>
+    </div>
+  );
 };
 
 export default App;

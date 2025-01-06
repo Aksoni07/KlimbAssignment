@@ -24,8 +24,8 @@ const parseExcel = (filePath) => {
                 currentDesignation: row['Current Designation'] || '',
             };
 
-            Object.keys(normalizedRow).forEach(key => {
-                if (!normalizedRow[key] && ['nameOfTheCandidate', 'email'].includes(key)) {
+            ['candidateName', 'email'].forEach((key) => {
+                if (!normalizedRow[key]) {
                     console.warn(`Row ${index + 1} is missing required field: ${key}`);
                 }
             });
